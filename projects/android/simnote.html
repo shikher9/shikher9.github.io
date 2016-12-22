@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simnote</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../css/main.css">
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: auto;
+            }
+        </style>
+
+    </head>
+    <body>
+        <nav>
+            <a href="../../index.html">HOME</a>
+            <a href="../../projects.html">PROJECTS</a>
+            <a href="../../contacts.html" style="float: right;margin-right: 20px;">CONTACT</a>
+        </nav>
+        <div class="wrapper">
+            <div class="content" style="display: flex;justify-content: space-around;">
+                <div>
+                    <div style="display: flex;justify-content: space-between;align-items: flex-start;font-size: 2.1rem;">
+                        <div style="margin-top: 20px;margin-right: 5px">
+                            This is the application which I developed in my free time.The application uses sqlite for
+                            data storage, fragments,
+                            intent, pending intent and widgets. The notifications are managed through Intent Service.
+                            The backup of notes is done though XML. The notes are backed up on the native storage. It
+                            also uses
+                            Android speech to text api for writing notes. The UI has several activities. The main
+                            activity
+                            uses a
+                            view pager to show different notes.
+
+                            <div style="margin-top: 20px">
+                                <a href="https://play.google.com/store/apps/details?id=com.ribeltun.notethemdown"
+                                   class="imp-link boxShadowSmall" target="_blank">PLAYSTORE LINK</a>
+                            </div>
+                        </div>
+                        <div class="container" style="padding: 0;margin: 0;">
+                            <br>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="https://lh3.googleusercontent.com/-Z-fmC3ZFHcnGO0m-WkQ4zKnzEUxMvcmmNgRbgaU4ulM0Z3pcRtQjxu4yCK0YMVncA=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/HyfrCvcgCkA7MwDQ7tu8J_UcG3phuCpjQjYmZDP9ULvlzOxwQQ70gLXZH4Br2-xKsa1Q=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/lcdEypCIQGf1MeqC6mdfHT4CgT6wQbAcs9uXGTtLomdCXxZC5C-CoGVpOtSPfvLLqg=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/7QRm3MJQ47kPQc320w6W_Ed8gKUn0glKD-Lnx5e6Rwrg3cZkm8GX2SB1hdAaT6ap9Q=h900">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="font-size: 2.1rem;">
+
+
+                        <h2>Detailed Description</h2>
+                        Simnote is a simple note taking application for making notes, lists, photo album, and audio
+                        note.
+                        It’s simple and uncluttered interface helps you to be make and edit notes faster than ever.
+                        Simnote enables you to make notes quickly and efficiently and share them with your friends. You
+                        can
+                        also protect your notes with a password.
+
+                        <h3>Features</h3>
+
+                        <ol>
+                            <li>Create different types of notes – text, list, photo, audio, drawing.</li>
+                            <li>Make check-lists and shopping list.</li>
+                            <li>Use repetitive reminders.</li>
+                            <li>Passwords protect your notes.</li>
+                            <li>Backup up your notes.</li>
+                            <li>Create short-cut for any note.</li>
+                            <li>Organize your notes into groups like archives, and trash, and make folders for easy
+                                management.
+                            </li>
+                            <li>Email you note to anyone.</li>
+                        </ol>
+
+                        <h3>Backup</h3>
+                        You can make backup of your notes. Every backup overwrites your previous one. This feature may
+                        be
+                        used for transferring notes from one device to another. This feature require READ and WRITE
+                        External
+                        storage permissions.
+
+                        <h3>Folders</h3>
+                        You can organize your notes into folders. To put a note in a folder, just press the ‘Default’
+                        during
+                        editing tour note. Add a new folder and select it.
+                        Folder does not need to be deleted; if a folder is empty it will automatically be deleted.
+
+                        <h3>Permissions</h3>
+                        <ul>
+                            <li>Photos/Media/Files – this permission is used for saving notes, making backup, making
+                                note
+                                from
+                                photos, restoring backup.
+                            </li>
+                            <li>Microphone – this permission is used for making an audio note.</li>
+                            <li>Run at start-up – this permission is used for setting reminders after device is
+                                booted.
+                            </li>
+                            <li>Install Shortcut – this permission is used for installing your note shortcut to home
+                                screen.
+                                You
+                                can pin your note to home screen by this feature.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

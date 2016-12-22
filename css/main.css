@@ -1,0 +1,137 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #313131;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: inline-block;
+    height: 70px;
+    padding-left: 20px;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+nav a:hover, nav a:visited {
+    color: #f7b786;
+    text-decoration: none;
+    border: none;
+}
+
+nav a:visited {
+    color: #f76d4b;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+aside {
+    background-color: #313131;
+    margin: 20px;
+    border-radius: 2%;
+}
+
+aside h3 {
+    padding-left: 15px;
+    margin: 5px 0px;
+    color: white;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+aside h3:hover {
+    color: #f7b786;
+}
+
+aside ul {
+    padding: 15px;
+    margin: 0;
+    list-style-type: none;
+    width: 230px;
+}
+
+aside ul a {
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.3rem;
+    transition-property: color, border-left, padding-left;
+    transition-duration: 1s;
+}
+
+aside ul a:hover, aside ul a:visited {
+    text-decoration: none;
+    border: none;
+    color: #f7b786;
+    border-left: 5px solid #f7b786;
+    padding-left: 10px;
+}
+
+aside ul a:visited {
+    color: #f76d4b;
+    text-decoration: none;
+}
+
+.content {
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+.boxShadowBig {
+    border: 1px solid rgba(103, 103, 103, 0.8);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05) inset, 0px 0px 20px rgba(103, 103, 103, 0.5);
+}
+
+.boxShadowSmall {
+    border: 1px solid rgba(103, 103, 103, 0.8);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 6px rgba(103, 103, 103, 0.5);
+}
+
+.imp-link {
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #313131;
+    display: inline-block;
+    transition-property: color, padding;
+    transition-duration: 0.5s;
+}
+
+.imp-link:hover {
+    text-decoration: none;
+    border: none;
+    color: #f7b786;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.imp-link:visited {
+    text-decoration: none;
+    border: none;
+    color: #f76d4b;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+h3 {
+    font-weight: bold;
+}

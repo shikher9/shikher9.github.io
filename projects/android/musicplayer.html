@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Music Player</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../css/main.css">
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: auto;
+            }
+        </style>
+
+    </head>
+    <body>
+        <nav>
+            <a href="../../index.html">HOME</a>
+            <a href="../../projects.html">PROJECTS</a>
+            <a href="../../contacts.html" style="float: right;margin-right: 20px;">CONTACT</a>
+        </nav>
+        <div class="wrapper">
+            <div class="content" style="display: flex;justify-content: space-around;">
+                <div>
+                    <div style="display: flex;justify-content: space-between;align-items: flex-start;font-size: 2.1rem;">
+                        <div style="margin-top: 20px;margin-right: 5px">
+                            This is the application which I developed in my free time. I developed this application
+                            because none of the free music players in
+                            the android play store were good. The music player uses fragments,
+                            intent, pending intent and widgets. It uses a foreground service for music playback, pending
+                            intent, fragments. The UI has several activities. The main activity uses a view pager to
+                            show different fragments.
+
+                            <div style="margin-top: 20px">
+                                <a href="https://play.google.com/store/apps/details?id=com.ribeltun.musicplayer"
+                                   class="imp-link boxShadowSmall" target="_blank">PLAYSTORE LINK</a>
+                            </div>
+                        </div>
+                        <div class="container" style="padding: 0;margin: 0;">
+                            <br>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="https://lh3.googleusercontent.com/JEj6lqJHlEsF9cE_BLuT7GC2kylmvX6FMUt1oO44KkQcXZf2z52IXUp5GH4aBmxTtXk=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/8pwjH3fLb61HLkmP2XY2PwmbHW0hE0nUSMB_Y8peTHaVwgpicw0ycV4hLPIJ7a9tLL3G=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/YGWFBe6V-EBB-mI1kiY6nZ0tVy_hETHdQD0WcusGGZ9hj4LaO6NIta05aXM58_Zlt5E=h900">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://lh3.googleusercontent.com/05GB13CqPwaIviWIXb2gwoxpYETzq43dJr9oe1x9QKqMFRCNrazjaSB8YyQfHOMmEg=h900">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="font-size: 2.1rem;">
+
+
+                        <h2>Detailed Description</h2>
+                        Axif is a music player having all features like equalizer, search, and great and simple user
+                        interface. It gives you access to essentials like albums, artists, playlist and more. The music
+                        player has two widgets which let you control song playback and equalizer. It supports mp3, aac,
+                        wav, flac and many other audio formats. Note that it is a music player not a music downloader.
+                        It cannot download any music.
+
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Browse and play your music by albums, artists, songs, playlists.</li>
+                            <li>2 widgets (4 X 2, 4 X 1) – one gives you access to music playback and the other gives
+                                control over equalizer and playback.
+                            </li>
+                            <li>Easy playlist creation and browsing.</li>
+                            <li>Notification view for controlling your music playback. Play, pause, previous, album art
+                                and more controls.
+                            </li>
+                            <li>Equalizer with support up to 8 bands (depends on the device). Presets for quick
+                                effect.
+                            </li>
+                            <li>Headset – playback pauses and resumes on being plugged and unplugged.</li>
+                            <li>Fast and low memory consumption.</li>
+                            <li>Music Shuffle and cycle modes.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
