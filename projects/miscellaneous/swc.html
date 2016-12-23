@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scalable Web Cache</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/main.css">
+
+    </head>
+    <body>
+        <nav>
+            <a href="../../index.html">HOME</a>
+            <a href="../../projects.html">PROJECTS</a>
+            <a href="../../contacts.html" style="float: right;margin-right: 20px;">CONTACT</a>
+        </nav>
+        <div class="wrapper">
+            <div class="content" style="display: flex;justify-content: space-around">
+                <div>
+                    <h1>Scalable Web Cache</h1>
+
+                    Implementation of <b>scalable web cache using consistent hashing on top of redis</b>. The source
+                    code is
+                    only compatible with windows as their is some windows specific code. To test, you need a windows
+                    machine. You also need to install <b>redis</b> (https://github.com/MSOpenTech/redis/releases).The
+                    redis
+                    servers store more than 10000 dummy key value pairs. The keys are distributed in three
+                    nodes initially. The nodes can be added or removed from the frontend view (views directory). You can
+                    also add key value pair to redis. The server on which key will be stored will be determined by
+                    consistent hashing. The communication between different clients takes place through <b>REST</b>
+                    web services.
+
+                    <div style="margin-top: 20px">
+                        <a href="https://github.com/shikher9/ScalableWebCache"
+                           class="imp-link boxShadowSmall" target="_blank">GITHUB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

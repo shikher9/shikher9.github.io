@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Charts</title>
+        <link rel="stylesheet" href="css/main.css">
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+
+            // Load the Visualization API and the corechart package.
+            google.charts.load('current', {'packages': ['corechart', 'sankey']});
+
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.charts.setOnLoadCallback(drawChart);
+            google.charts.setOnLoadCallback(drawChartSankey);
+
+
+            // Callback that creates and populates a data table,
+            // instantiates the pie chart, passes in the data and
+            // draws it.
+            function drawChart() {
+
+                var dataArray = [];
+
+                for (var i = 0; i < localStorage.length; i++) {
+                    dataArray.push([localStorage.key(i), parseInt(localStorage.getItem(localStorage.key(i)))]);
+                }
+
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Topping');
+                data.addColumn('number', 'Slices');
+                data.addRows(dataArray);
+
+                // Set chart options
+                var options = {
+                    'title': '',
+                    'width': 600,
+                    'height': 300
+                };
+
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+            }
+            function drawChartSankey() {
+
+                //get data from local storage
+                var finalObject = JSON.parse(localStorage.getItem("finalObject"));
+                console.log(JSON.parse(localStorage.getItem("sankeyDataObj")));
+                console.log(finalObject);
+
+                var sankeyDataArray = [];
+
+                for (var key in finalObject) {
+                    var strArray = key.split("||");
+                    sankeyDataArray.push([strArray[0], strArray[1], finalObject[key]]);
+                }
+
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'From');
+                data.addColumn('string', 'To');
+                data.addColumn('number', 'Weight');
+                data.addRows(sankeyDataArray);
+
+                // Set chart options
+                var options = {
+                    width: 550,
+                };
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+
+    <body style="background-color: white;color: black;margin: 20px;">
+        <h2 style="text-align: center;">Build Your Own Pizza</h2>
+        <div id="dashboard">Dashboard</div>
+        <!--Div that will hold the pie chart-->
+        <div style="display: flex;justify-content: space-around;margin-bottom: 50px;">
+            <div id="chart_div" style="border: 2px solid black; display: inline-block;"></div>
+            <div id="sankey_multiple" style="display: inline-block;"></div>
+        </div>
+        <div style="text-align: center">
+            <form action="index.html">
+                <input type="submit" class="btn" value="Home">
+            </form>
+        </div>
+    </body>
+</html>
+
+

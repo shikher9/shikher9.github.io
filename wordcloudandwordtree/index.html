@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Word Cloud and Word Tree</title>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="d3.v3.min.js"></script>
+        <script type="text/javascript" src="d3.layout.cloud.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+            var pushArray = ['Phrases'];
+            var totArray = [];
+            totArray.push(pushArray);
+            function generateWordTree(text) {
+
+                totArray = [['Phrases'],[text]];
+                google.charts.load('current', {packages: ['wordtree']});
+                google.charts.setOnLoadCallback(drawChart);
+            }
+
+            function drawChart() {
+
+                var data = google.visualization.arrayToDataTable(totArray);
+                var options = {
+                    wordtree: {
+                        format: 'implicit',
+                        font: 'Arial'
+                    }
+                };
+                var chart = new google.visualization.WordTree(document.getElementById("wtdiv"));
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wcdiv" style="font-weight: bold;width: 60%;display: inline-block;vertical-align: top;">
+
+        </div>
+        <div id="wtdiv" style="width: 30%;display: inline-block;height: 450px;">
+
+        </div>
+
+        <script type="text/javascript" defer>
+
+            function generateWordCloud(textAreaText) {
+
+                var freqList = generateFrequencyList(textAreaText);
+
+
+                var color = d3.scale.linear()
+                    .domain([0, 1, 2, 3, 4, 5, 6, 10, 15, 20, 100])
+                    .range(["#aa80ff", "#ccff66", "#ff6666", "#79ff4d", "#993300", "#cc33ff", "#ffaa00", "#3366cc", "#333300", "#993399", "#339933", "#6600cc"]);
+
+                d3.layout.cloud().size([800, 300])
+                    .words(freqList)
+                    .rotate(0)
+                    .fontSize(function (d) {
+                        return d.size;
+                    })
+                    .on("end", draw)
+                    .start();
+
+                function draw(words) {
+                    d3.select("#wcdiv").append("svg")
+                        .attr("width", 850)
+                        .attr("height", 350)
+                        .attr("class", "wordcloud")
+                        .append("g")
+                        .attr("transform", "translate(320,200)")
+                        .selectAll("text")
+                        .data(words)
+                        .enter().append("text")
+                        .style("font-size", function (d) {
+                            return d.size + "px";
+                        })
+                        .style("fill", function (d, i) {
+                            return color(i);
+                        })
+                        .attr("transform", function (d) {
+                            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                        })
+                        .text(function (d) {
+                            return d.text;
+                        });
+                }
+            }
+
+            generateWordCloud();
+
+
+        </script>
+
+        <div style="text-align:center;width: 100%;">
+        <textarea id="textAreaInput" rows="30">
+Apply Rx Levo Throxiane everyday. Take Threonine on empty stomach everyday.
+ Apply Rx Nystatin Cream to lesions every 4 to 6 hours. Keep from scratching or other irritations. Also, keep areas well learned to prevent from spreading. Will Samuel for follow-up appointment in one week. If any questions or conditions worsen contact doctor immediately
+I Rama Murthy, MD diagnosed Devi with borderline Myotonic MUSCULAR dystrophy (MMD). MMD is where muscles have difficulty relaxing and mild heart problems.
+55 year old male Caucasian with a history of diabetes mel­ litus and chronic renal insufficiency now with atrial fibrillation, rapid ventricular rate, congestive heart failure exacerbation and right leg cellulitis going to 10W telemetry unit.
+        </textarea>
+            <div>
+                <button style="padding: 10px;background-color: green;color: white;" onclick="getCWordCloudTree();">
+                    Generate Word Cloud And Word Tree
+                </button>
+                <button style="padding: 10px;background-color: red;color: white;">Cancel</button>
+            </div>
+        </div>
+        <script type="text/javascript" defer>
+
+            var textAreaInput = document.getElementById("textAreaInput");
+            generateWordTree(textAreaInput.value);
+
+            function getCWordCloudTree() {
+                var textAreaInput = document.getElementById("textAreaInput");
+                var wcdiv = document.getElementById("wcdiv");
+                var wtdiv = document.getElementById("wtdiv");
+                wtdiv.innerHTML = "";
+                wcdiv.innerHTML = "";
+                generateWordCloud(textAreaInput.value);
+                generateWordTree(textAreaInput.value);
+            }
+        </script>
+    </body>
+</html>

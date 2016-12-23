@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Verdana, "Agency FB", SansSerif;
+}
+
+#textAreaInput {
+    display: inline-block;
+    border: 1px solid black;
+    max-height: 130px;
+    width: 95%;
+}
+
+button {
+    font-weight: bold;
+    border: 1px solid #6a4304;
+}
+

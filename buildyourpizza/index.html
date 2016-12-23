@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Build your own pizza</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="wrapper-main">
+                <h2>Build Your Own Pizza</h2>
+                <form id="buildForm" action="charts.html" onsubmit="return buildOrder();" name="pizzaForm">
+                    <div class="navigation">
+                        <a id="sizeandcrust" href="#" onclick="linkClicked(event);">Size and Crust</a>
+                        <a id="cheeseandsauce" href="#" onclick="linkClicked(event);">Cheese and Sauce</a>
+                        <a id="toppings" href="#" onclick="linkClicked(event);">Toppings</a>
+                    </div>
+                    <div class="tab" id="tab1">
+                        <h4>CHOOSE SIZE & CRUST</h4>
+                        <div class="tab-2ndchild">
+                            <div>
+                                <h4>HAND TOSSED</h4>
+                                <div>
+                                    Garlic-seasoned crust with a rich, buttery taste.<br><br>
+                                    <input type="radio" name="size-crust-option" value="small"> Small (10")<br>
+                                    <input type="radio" name="size-crust-option" value="medium"> Medium (12")<br>
+                                    <input type="radio" name="size-crust-option" value="large" checked> Large (14")<br>
+                                    <input type="radio" name="size-crust-option" value="x-large"> X-Large (16")
+                                </div>
+                            </div>
+                            <div>
+                                <h4>HANDMADE PAN</h4>
+                                <div>
+                                    Two layers of cheese,toppings to the edge, and a crust that bakes up
+                                    golden and crispy with a buttery taste.<br><br>
+                                    <input type="radio" name="size-crust-option" value="medium"> Medium (12")
+                                </div>
+                            </div>
+                            <div>
+                                <h4>CRUNCHY THIN CRUST</h4>
+                                <div>
+                                    Thin enough for the optimum crispy to crunchy ratio.<br><br>
+                                    <input type="radio" name="size-crust-option" value="medium"> Medium (12")<br>
+                                    <input type="radio" name="size-crust-option" value="large"> Large (14")
+                                </div>
+                            </div>
+                            <div>
+                                <h4>BROOKLYN STYLE</h4>
+                                <div>
+                                    Hand stretched to be big, thin, and perfectly foldable.<br><br>
+                                    <input type="radio" name="size-crust-option" value="large"> Large (14")<br>
+                                    <input type="radio" name="size-crust-option" value="x-large"> X-Large (16")
+                                </div>
+                            </div>
+                            <div>
+                                <h4>GLUTEN FREE CRUST</h4>
+                                <div>
+                                    Domino's pizza made with a Gluten Free Crust.<br><br>
+                                    <input type="radio" name="size-crust-option" value="small"> Small (10")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab2">
+                        <h4>CHOOSE CHEESE & SAUCE</h4>
+                        <div class="tab-2ndchild">
+                            <div style="flex-basis: 40%">
+                                <h4>CHEESE?</h4>
+                                <div>
+                                    <input id="cheeseType" type="checkbox" name="cheese" value="cheese"
+                                           onchange="checkboxChange(event);"> Cheese<br><br>
+                                    <div id="cheeseTypeBox" style="visibility: hidden;">
+                                        <select name="cheeseType">
+                                            <option value="light">Light</option>
+                                            <option value="normal">Normal</option>
+                                            <option value="extra">Extra</option>
+                                            <option value="double">Double</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex-basis: 40%">
+                                <h4>CHOOSE A SAUCE</h4>
+                                <div>
+                                    <input id="sauceType" type="checkbox" name="sauce" value="sauce"
+                                           onchange="checkboxChange(event);" checked> Sauce<br><br>
+                                    <div id="sauceTypeBox" style="visibility: visible;">
+                                        <select name="sauceType">
+                                            <option value="light">Light</option>
+                                            <option value="normal">Normal</option>
+                                            <option value="extra">Extra</option>
+                                        </select><br><br>
+                                        <input type="radio" name="sauceType" value="RobustInspiredTomatoSauce"> Robust
+                                        Inspired Tomato Sauce<br>
+                                        <input type="radio" name="sauceType" value="HeartyMarinaraSauce"> Hearty
+                                        Marinara Sauce<br>
+                                        <input type="radio" name="sauceType" value="BBQSauce"> BBQ Sauce<br>
+                                        <input type="radio" name="sauceType" value="GarlicParmesanWhiteSauce"> Garlic
+                                        Parmesan White Sauce<br>
+                                        <input type="radio" name="sauceType" value="AlfredoSauce"> Alfredo Sauce<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab3">
+                        <h4>CHOOSE TOPPINGS</h4>
+                        <div class="tab-2ndchild">
+                            <div style="flex-basis: 40%;">
+                                <h4>CHOOSE MEATS</h4>
+                                <div style="display: flex;">
+                                    <div>
+                                        <input type="checkbox" name="meat-toppings-option" value="Pepperoni" checked>
+                                        Pepperoni<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Italian Sausage">
+                                        Italian
+                                        Sausage<br>
+                                        <input type="checkbox" name="meat-toppings-option"
+                                               value="Sliced Italian Sausage">
+                                        Sliced Italian Sausage<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Beef"> Beef<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Philly Steak"> Philly
+                                        Steak<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Ham"> Ham<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Bacon"> Bacon<br>
+                                    </div>
+                                    <div style="padding-left: 20px;">
+                                        <input type="checkbox" name="meat-toppings-option" value="Salami"> Salami<br>
+                                        <input type="checkbox" name="meat-toppings-option" value="Premium Chicken">
+                                        Premium
+                                        Chicken<br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex-basis: 40%;">
+                                <h4>CHOOSE NON-MEATS</h4>
+                                <div style="display: flex;">
+                                    <div style="flex-basis: 300px;">
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Cheddar Cheese"
+                                               checked>
+                                        Cheddar Cheese<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Feta Cheese"> Feta
+                                        Cheese<br>
+                                        <input type="checkbox" name="non-meat-toppings-option"
+                                               value="Shredded Parmesan Asiago"> Shredded Parmesan Asiago<br>
+                                        <input type="checkbox" name="non-meat-toppings-option"
+                                               value="Shredded Provolone Cheese"> Shredded Provolone Cheese<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Banana Peppers">
+                                        Banana Peppers<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Black Olives">
+                                        Black
+                                        Olives<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Garlic" checked>
+                                        Garlic<br>
+                                    </div>
+                                    <div style="flex-basis: 250px;">
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Green Peppers">
+                                        Green
+                                        Peppers<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Japeno Peppers">
+                                        Japeno Peppers<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Mushrooms">
+                                        Mushrooms<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Pineapple">
+                                        Pineapple<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Onions">
+                                        Onions<br>
+                                        <input type="checkbox" name="non-meat-toppings-option"
+                                               value="Roasted Red Peppers">
+                                        Roasted Red Peppers<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Spinach">
+                                        Spinach<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Diced Tomatoes">
+                                        Diced
+                                        Tomatoes<br>
+                                        <input type="checkbox" name="non-meat-toppings-option" value="Hot Sauce"> Hot
+                                        Sauce<br>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn" value="Build">
+                        <input type="button" class="btn" value="Cancel" id="cancelBuildForm"
+                               onclick="cancelClicked('buildForm')"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            //localStorage.clear();
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
