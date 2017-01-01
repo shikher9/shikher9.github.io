@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Events Info</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../css/main.css">
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="../../index.html">HOME</a>
+            <a href="../../projects.html">PROJECTS</a>
+            <a href="../../contacts.html" style="float: right;margin-right: 20px;">CONTACT</a>
+        </nav>
+        <div class="wrapper">
+            <div class="content" style="display: flex;justify-content: space-around;flex-direction: column;">
+                <div>
+                    <div style="display: flex;justify-content: space-between;align-items: flex-start;font-size: 2.1rem;">
+                        <div style="margin-top: 20px;margin-right: 5px">
+
+                            <h1>Fitbit Social Network</h1>
+                            <h2>Introduction</h2>
+                            A simple web app for showing information about events. There are four events and each event
+                            has several sessions. The UI for web app is mobile responsive. The application uses Flexbox
+                            for layout, CSS3 and Angular JS.
+                            <div style="display: flex;justify-content: flex-start;">
+
+                                <div style="margin-top: 20px;margin-right: 20px;">
+                                    <a href="https://eventsinfo.herokuapp.com"
+                                       class="imp-link boxShadowSmall" target="_blank">DEMO</a>
+                                </div>
+                                <div style="margin-top: 20px">
+                                    <a href="https://github.com/shikher9/EventsInfo"
+                                       class="imp-link boxShadowSmall" target="_blank">GITHUB</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="padding: 0;margin: 20px;">
+                    <h2>Screenshots</h2>
+                    <br>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="../../images/ei1.PNG">
+                            </div>
+
+                            <div class="item">
+                                <img src="../../images/ei2.PNG">
+                            </div>
+
+                            <div class="item">
+                                <img src="../../images/ei3.PNG">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
