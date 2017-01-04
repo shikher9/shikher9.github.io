@@ -2,9 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Web / UI Portfolio</title>
+        <title>UI Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/main.css">
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: auto;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -13,23 +23,212 @@
             <a href="contacts.html" style="float: right;margin-right: 20px;">CONTACT</a>
         </nav>
         <div class="wrapper">
-            <div style="display: flex;justify-content:center;width: 100%;align-items: stretch;">
-                <aside class="boxShadowBig" style="border-radius: 0%;">
-                    <h3>Web / UI Portfolio</h3>
-                    <ul>
-                        <li><a href="projects/web/fitbitsocialnetwork.html" target="_blank">Fitbit Social Network</a>
-                        </li>
-                        <li><a href="projects/web/bodybrowser.html" target="_blank">Body Browser using Three.js</a></li>
-                        <li><a href="projects/miscellaneous/ElectronicStore.html" target="_blank">Electronic Store</a>
-                        <li></li>
-                        <li><a href="projects/web/EventsInfo.html" target="_blank">Events Info</a></li>
-                        <li></li>
-                        <li><a href="buildyourpizza/index.html" target="_blank" target="_blank">Build your own pizza</a>
-                        </li>
-                        <li><a href="wordcloudandwordtree/index.html" target="_blank">Word Cloud and Word Tree using
-                            D3.js</a></li>
-                    </ul>
-                </aside>
+            <div style="width: 100%">
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="projects/web/fitbitsocialnetwork.html" target="_blank">Fitbit Social Network</a>
+                        <p>This project is about fitness tracking and social networking among fitness enthusiasts. We
+                            have
+                            integrated with Fitbit API and are tracking the fitness levels of individuals,
+                            display the fitness data in user’s dashboard in presentable form like graphs
+                            and charts etc. We have also introduced a concept of social networking among friends with
+                            news feed containing fitness data about your friends <a
+                                    href="projects/web/fitbitsocialnetwork.html" target="_blank"
+                                    style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" class="active"></li>
+                                <li data-slide-to="1"></li>
+                                <li data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/image1.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/image2.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/image3.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="projects/web/bodybrowser.html" target="_blank">Body Browser</a>
+                        <p>This project uses WebGL and Three.js to show human male body (skeletal, muscular, normal) in
+                            the browser. The demo uses lighting ,shaders, materials ,and displays models in dae
+                            (COLLADA) format directly in the browser. Three.js is a powerful framework for showing 3d
+                            graphics in the browser <a
+                                    href="projects/web/bodybrowser.html" target="_blank"
+                                    style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/bb.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="projects/web/EventsInfo.html" target="_blank">Events Info</a>
+                        <p>A simple web app for showing information about events. There are four events and each event
+                            has several sessions. The UI for web app is mobile responsive. The application uses Flexbox
+                            for layout, CSS3 and Angular JS. <a
+                                    href="projects/web/EventsInfo.html" target="_blank"
+                                    style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" class="active"></li>
+                                <li data-slide-to="1"></li>
+                                <li data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/ei1.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/ei2.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/ei3.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="projects/miscellaneous/ElectronicStore.html" target="_blank">Electronic Store</a>
+                        <p>An electronic store (a website for shopping electronic items) which allows both OLAP and OLTP
+                            operations. It uses php, maria db and google charts <a
+                                    href="projects/miscellaneous/ElectronicStore.html" target="_blank"
+                                    style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" class="active"></li>
+                                <li data-slide-to="1"></li>
+                                <li data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/1.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/2.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/3.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/4.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/5.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="buildyourpizza/index.html" target="_blank">Build your own pizza</a>
+                        <p>An application which a user can use to customize his pizza and charts showing the pizza
+                            contents <a
+                                    href="buildyourpizza/index.html" target="_blank"
+                                    style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" class="active"></li>
+                                <li data-slide-to="1"></li>
+                                <li data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/bp1.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/bp2.PNG">
+                                </div>
+
+                                <div class="item">
+                                    <img src="images/bp3.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDiv boxShadowBig">
+                    <div class="intro" style="padding: 20px;">
+                        <a href="wordcloudandwordtree/index.html" target="_blank">Word Cloud and Word Tree using
+                            D3.js</a>
+                        <p>A simple word tree and word cloud implementation using D3.js <a
+                                href="wordcloudandwordtree/index.html" target="_blank"
+                                style="color: #f7b786">more...</a></p>
+                    </div>
+                    <div class="container" style="padding: 0;flex-grow: 0;flex-shrink: 0;flex-basis: 60%">
+                        <br>
+                        <div class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/wcwt.PNG">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

@@ -91,6 +91,38 @@ aside ul a:visited {
     text-decoration: none;
 }
 
+.projectDiv {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    font-size: 2.1rem;
+    background-color: #313131;
+    color: white;
+    justify-content: space-between;
+}
+
+.projectDiv > .intro > a {
+    text-decoration: none;
+    border: none;
+    color: #f7b786;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transition-property: color, font-size;
+    transition-duration: 1s;
+}
+
+.projectDiv > .intro > a:hover, .projectDiv > .intro > a a:visited {
+    text-decoration: none;
+    border: none;
+    color: #f76d4b;
+    font-size: 3.3rem;
+}
+
+.projectDiv > .intro > a a:visited {
+    color: #f76d4b;
+    text-decoration: none;
+}
+
 .content {
     margin: 20px;
     font-size: 1.2rem;
